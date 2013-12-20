@@ -1,0 +1,31 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Storage.js demo</title>
+
+    <link rel="stylesheet" href="" type="text/css" media="all">
+
+    <!--[if lt IE 9]> HTML5Shiv
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script src="storage.js"></script>
+    <script>
+    	LS.init('demo');
+    	LS.set('data_a', {hello: 'world'});
+    	LS.set('data_b', 'hello world');
+    	LS.set('data_c', 100);
+    	console.log(localStorage);
+    	console.log('demo_data_a is an',typeof LS.get('data_a')); // object
+    	console.log('demo_data_b is an',typeof LS.get('data_b')); // string
+    	console.log('demo_data_c is an',typeof LS.get('data_c')); // number
+    </script>
+</head>
+<body>
+    View your console to see the localStorage information
+</body>
+</html>

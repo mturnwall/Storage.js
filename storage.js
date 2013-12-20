@@ -7,13 +7,12 @@
  *  @namespace
  *  @author Michael Turnwall
  */
-var LS = (function (global) {
-    
+(function (global) {
     var LS = function() {};
 
     LS.prototype = /** @lends LS */ {
         constructor: LS,
-        prefix: 'default_',
+        prefix: '',
         /**
          *  Set a key:value on the window.localStorage object.
          *  The value can be either a String or JSON.
@@ -71,6 +70,6 @@ var LS = (function (global) {
             }
         }
     };
-    global.LS = LS;
+    global.LS = new LS();
 
 })(typeof window === 'undefined' ? this : window);
